@@ -1,0 +1,13 @@
+Instructions:
+printenv | grep ROS - Find all ROS setup
+cd workspace-directory => source devel/setup.bash - Add workspace to ROS environment
+echo $ROS_PACKAGE_PATH - Check workspace environment
+cd workspace-directory => catkin_make - Build workspace environment
+roscore - ROS core start
+# In other terminal. RUN AGAIN source devel/setup.bash 
+rosrun package_name file args
+# Example in workspace:
+	rosrun begin_tutorial talker
+	rosrun begin_tutorial listener
+	rosrun begin_tutorial add_two_ints_server
+	rosrun begin_tutorial add_two_ints_client 1 3
